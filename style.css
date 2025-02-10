@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(183, 238, 144);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+}
+
+
+#panel {
+    height: 80%;
+    width: 70%;
+    background-color: #ffffffde;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#ptop {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(48, 139, 46, 0.692);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0px 30%;
+    justify-content: space-between;
+}
+
+
+.elem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.box {
+    color: rgba(60, 128, 0, 0.763);
+    font-weight: 550;
+    font-size: 25px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+#pbtm {
+    width: 100%;
+    gap: 10px;
+    height: calc(100% - 100px);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 128, 30, 0.603);
+    color: black;
+    border-radius: 50%;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.bubble:hover {
+    background-color: rgba(0, 128, 30, 0.822);
+    cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+    #panel {
+        width: 80%;
+    }
+    #ptop {
+        padding: 0 20%;
+    }
+}
+@media (max-width: 1024px) {
+    #panel {
+        width: 90%;
+    }
+    #ptop {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    #panel {
+        width: 90%;
+        height: 100%;
+    }
+    #ptop {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        gap: 10px;
+    }
+    .box {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+    .bubble {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #panel {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    #ptop {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .box {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+    .bubble {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+    #pbtm {
+        padding: 10px;
+        gap: 5px;
+    }
+}
+#pbtm {
+    display: flex;
+    flex-direction: column; /* Ensures each child appears on a new line */
+    align-items: center; /* Centers text horizontally */
+}
+
+#pbtm h1:first-child {
+    color: rgba(255, 0, 0, 0.724); 
+    margin-top: 30px;
+}
+
+#pbtm h1:last-child {
+    color: rgba(0, 128, 0, 0.703); 
+    margin-top: 8px; /* Adjust spacing between first and last child */
+}
+
+.hidden{
+    display: none!important;
+}
+
+/* StartPage CSS */
+#startPage, #endPage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+#startPage h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#startPage button {
+    margin: 20px auto;
+    padding: .7rem 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: #0fc102;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+#startPage #name{
+    /* input box */
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #555;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);   
+    margin-top: 20px;
+}
+#startPage button:hover {
+    background-color: #0056b3;
+}
+
+#startPage ul{
+    list-style-type: square;
+    padding: 0;
+    font-size: 20px;
+    text-align: left;
+}
+#startPage ul li{
+    padding: 10px;
+}
+
+#endPage{
+    padding: 3rem;
+    text-align: center;
+}
+#endPage h1 {
+
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 25, 25);
+}
+/* Leaderboard */
+#endPage #leaderboard {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+#endPage #leaderboard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#endPage #leaderboard table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+#endPage #leaderboard table th,
+#endPage #leaderboard table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+#endPage #leaderboard table th {
+    font-weight: bold;
+}
+
+#endPage #leaderboard table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#endPage #leaderboard table tr:hover {
+    background-color: #f0f0f0;
+}
+
+#endPage #leaderboard table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+#endPage #leaderboard table th {
+    font-weight: bold;
+}
+
+#endPage #leaderboard table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#endPage #leaderboard table tr:hover {
+    background-color: #f0f0f0;
+}
+
+#endPage button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: #0fc102;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+}
+
+#endPage button:hover {
+    background-color: #0056b3;
+}
+
+#endPage p.Score{
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.5rem;
+}
+
+#endPage P.Score #finalScore {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.5rem;
+}

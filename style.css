@@ -171,6 +171,32 @@ html, body {
     width: 60px;
 }
 
+
+/* for mobile */
+@media (max-width: 768px) {
+    #pbtm .bubble {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    #pptm{
+        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    }
+    /* top */
+
+    #ptop {
+        text-align: center;
+        transform-origin: left;
+        transform: scaleX(0.9);
+    }
+    #pbtm {
+        padding: 10px;
+        gap: 5px;
+    }
+
+}
+
 #pbtm h1:first-child {
     color: rgba(255, 0, 0, 0.724); 
     margin-top: 30px;

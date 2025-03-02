@@ -30,7 +30,7 @@
                 <option value="extreme">5 Minute</option>
             </select>
              <input type="text" id="name" placeholder="Enter your name">
-            <button id="startBtn" onclick="playStart()">Start</button>
+            <button id="startBtn">Start</button>
         </div>
         <div id="panel" class="hidden">
             <div id="ptop">
@@ -56,7 +56,7 @@
             </h1>
 
             <p class="Score">Your Score is <span id="finalscore">0</span></p>
-            <button id="restartBtn" onclick="playStart()">Restart</button>
+            <button id="restartBtn">Restart</button>
 
             <div id="leaderboard">
                 <h2>Leaderboard</h2>
@@ -136,7 +136,8 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
+    
 </body>
 
 </html>

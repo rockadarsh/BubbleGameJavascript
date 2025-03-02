@@ -103,7 +103,7 @@ function runTimer()
                 console.log(leaderboard, "bsort");
                 leaderboard.sort((a, b) => b.score - a.score);
                 console.log(leaderboard, "asort");
-                saveLeaderboard(leaderboard);
+                saveLeaderboard(leaderboard.slice(0, 10));
                 // Sort leaderboard by score
                 // Display leaderboard
             const leaderboardTable = document.querySelector("#leaderboardTable tbody");

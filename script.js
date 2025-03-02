@@ -69,7 +69,7 @@ function runTimer()
 {
     const difficulty = document.querySelector("#difficulty").value;
     if(difficulty == "extreme-easy") {
-        timer = 10;
+        timer = 30;
     }else if(difficulty === "easy") {
         timer = 60;
     }else if(difficulty === "medium") {
